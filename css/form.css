@@ -21,3 +21,11 @@ background: #036572;
 color: #ffffff;
 border: none;
 }
+
+.form__button:hover {
+  background: #036580;;
+}
+
+.form__button:active {
+  background: #036590;
+}
