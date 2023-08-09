@@ -6,12 +6,6 @@ html {
   box-sizing: inherit;
 }
 
-.container {
-  max-width: 900px;
-  padding: 20px;
-  margin: 0 auto;
-}
-
 .section {
   margin: 10px 0;
   background: #ffffff;
