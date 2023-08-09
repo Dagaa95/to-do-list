@@ -13,10 +13,6 @@
   border-bottom: 1px solid #ddd;
 }
 
-.tasks__button--done {
-  background: #08641f;
-}
-
 .tasks__button {
   color: #ffffff;
   width: 30px;
@@ -25,10 +21,30 @@
   border: none;
 }
 
-.tasks__content--done {
-  text-decoration: line-through;
+.tasks__button--done {
+  background: #08641f;
+}
+
+.tasks__button--done:hover {
+  background: #077e25;
+}
+
+.tasks__button--done:active {
+  background: #088f2a;
 }
 
 .tasks__button--remove {
-  background: #db0505;;
+  background: #db0505;
+}
+
+.tasks__button--remove:hover {
+  background: #fa1212;
+}
+
+.tasks__button--remove:active {
+  background: #e72323;
+}
+
+.tasks__content--done {
+  text-decoration: line-through;
 }
