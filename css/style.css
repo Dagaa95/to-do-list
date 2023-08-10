@@ -8,5 +8,6 @@ html {
 
 .body {
   font-family: 'Raleway', sans-serif;
-  background: #dacccc
+  background-color: #dacccc;
+  max-width: 800px;
 }
