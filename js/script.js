@@ -26,6 +26,7 @@
         doneTask(index);
       });
     });
+  }
 
 
     const removeButtons = document.querySelectorAll(".js-remove");
@@ -67,10 +68,7 @@
       if (newTaskContent !== "") {
         addNewTask(newTaskContent);
         newTaskElement.value = "";
-      }
-
-      newTaskElement.focus();
-    };
+      };
 
     const init = () => {
       render();
@@ -81,4 +79,4 @@
 
     init();
 
-  };
+  }};
