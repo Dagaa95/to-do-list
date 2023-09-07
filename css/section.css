@@ -10,6 +10,12 @@ margin: 0;
 border-bottom: 1px solid #ddd;
 }
 
+@media (max-width: 767px) {
+  .section__header {
+      display: flex;
+      justify-content: center;
+  }}
+
 .section__body {
   padding: 20px;
 }
