@@ -21,28 +21,28 @@
   const bindEvents = () => {
     const toggleDoneButtons = document.querySelectorAll(".js-done");
 
-    toggleDoneButtons.forEach((doneButton, index) => {
-      toggleDoneButtons.addEventListener("click", () => {
+    toggleDoneButtons.forEach((toggleDoneButton, index) => {
+      toggleDoneButton.addEventListener("click", () => {
         doneTask(index);
       });
     });
-  }
+  };
 
 
-    const removeButtons = document.querySelectorAll(".js-remove");
+  const removeButtons = document.querySelectorAll(".js-remove");
 
-    removeButtons.forEach((removeButton, index) => {
-      removeButton.addEventListener("click", () => {
-        removeTask(index);
-      });
+  removeButtons.forEach((removeButton, index) => {
+    removeButton.addEventListener("click", () => {
+      removeTask(index);
     });
+  });
 
 
-    const render = () => {
-      let HTMLContent = "";
+  const render = () => {
+    let HTMLContent = "";
 
-      for (const task of tasks) {
-        HTMLContent += `
+    for (const task of tasks) {
+      HTMLContent += `
       <li class="task__item>
 
      <button class="task__button task__button--done js-done">${task.done ? "✓" : ""}</button>
@@ -52,23 +52,23 @@
 <button class="task__button task__button--remove js-remove">🗑️</button>
 </li >
   `;
-      }
+    }
 
-      document.querySelector(".js-task").innerHTML = HTMLContent;
+    document.querySelector(".js-task").innerHTML = HTMLContent;
 
-      bindEvents();
+    bindEvents();
+  };
+
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+
+    const newTaskElement = document.querySelector(".js-newTask");
+    const newTaskContent = newTaskElement.value.trim();
+
+    if (newTaskContent !== "") {
+      addNewTask(newTaskContent);
+      newTaskElement.value = "";
     };
-
-    const onFormSubmit = (event) => {
-      event.preventDefault();
-
-      const newTaskElement = document.querySelector(".js-newTask");
-      const newTaskContent = newTaskElement.value.trim();
-
-      if (newTaskContent !== "") {
-        addNewTask(newTaskContent);
-        newTaskElement.value = "";
-      };
 
     const init = () => {
       render();
@@ -79,4 +79,5 @@
 
     init();
 
-  }};
+  }
+};
