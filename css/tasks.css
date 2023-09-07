@@ -1,10 +1,10 @@
-.tasks {
-  padding: 0;
-  margin: 0;
+.task {
+  padding: 30px 10px;
+  margin: auto;
   list-style: none;
 }
 
-.tasks__item {
+.task__item {
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-gap: 10px;
@@ -13,7 +13,7 @@
   border-bottom: 1px solid #ddd;
 }
 
-.tasks__button {
+.task__button {
   color: #ffffff;
   width: 30px;
   height: 30px;
@@ -21,30 +21,22 @@
   border: none;
 }
 
-.tasks__button--done {
-  background: #08641f;
+.task__button--done {
+  background-color: #08641f;
 }
 
-.tasks__button--done:hover {
-  background: #077e25;
+.task__button--done:hover {
+  background-color: #077e25;
 }
 
-.tasks__button--done:active {
-  background: #088f2a;
+.task__button--remove {
+  background-color: #db0505;
 }
 
-.tasks__button--remove {
-  background: #db0505;
+.task__button--remove:hover {
+  background-color: #fa1212;
 }
 
-.tasks__button--remove:hover {
-  background: #fa1212;
-}
-
-.tasks__button--remove:active {
-  background: #e72323;
-}
-
-.tasks__content--done {
+.task__content--done {
   text-decoration: line-through;
 }
